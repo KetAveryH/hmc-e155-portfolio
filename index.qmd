@@ -1,0 +1,16 @@
+---
+title: "Ket's E155 Portfolio"
+image: images/headshot.jpg
+about:
+    template: jolla
+    links:
+        - icon: linkedin
+          text: LinkedIn
+          href: https://www.linkedin.com/in/ket-hollingsworth/
+        - icon: githun
+          text: Github
+          href: https://github.com/KetAveryH
+---
+
+Ket Hollingsworth is a current Senior at Harvey Mudd College studying under a Joint Computer Science and Mathematics Major. His interests lie mainly in the intersection of Hardware and Software, an interest he began nuturing his sophomore year after joining the MuddSub underwater robotics club. Since then he went on to perform research at the intersection of Systems and Machine Learning, studying the variety of methods to move Machine Learning from the cloud to the edge while taking into account the energy constraints of the system. Besides academics Ket enjoys time with his family, playing volleyball with friends, and playing music. 
+

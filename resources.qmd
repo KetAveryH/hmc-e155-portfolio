@@ -1,0 +1,8 @@
+---
+title: "Resources Page"
+about:
+    template: jolla
+    links:
+        - text: "<img src='images/microps-logo.png' alt='Custom Icon' style='width:20px;height:20px;'> E155 Website"
+          href: https://www.linkedin.com/in/ket-hollingsworth/
+---

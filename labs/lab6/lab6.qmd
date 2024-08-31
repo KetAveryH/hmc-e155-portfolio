@@ -1,0 +1,10 @@
+---
+title: "Lab 6: The Internet of Things and Serial Peripheral Interface"
+description: "Welcome to my Quarto portfolio"
+author: "Ket Hollingsworth"
+date: "8/23/24"
+categories:
+  - reflection
+  - labreport
+draft: false
+---

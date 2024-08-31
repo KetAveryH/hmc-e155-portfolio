@@ -1,0 +1,12 @@
+---
+title: "Initial Learning Goals"
+description: "This contains my set of learning goals!"
+author: "Ket Hollingsworth"
+date: "8/30/24"
+categories:
+  - reflection
+  - labreport
+draft: false
+---
+
+In this course I hope to get better at reading through intense documentation. I want to be confident with debugging with an oscilloscope along with other tools that allow me to debug hardware at a very low level. I believe this will give me the fundamentals I need to work in the field of embedded engineering!

@@ -1,0 +1,10 @@
+---
+title: "Lab 4: Digital Audio"
+description: "Welcome to my Quarto portfolio"
+author: "Ket Hollingsworth"
+date: "8/23/24"
+categories:
+  - reflection
+  - labreport
+draft: false
+---

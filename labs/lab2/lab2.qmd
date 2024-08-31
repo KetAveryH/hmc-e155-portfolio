@@ -1,0 +1,10 @@
+---
+title: "Lab 2: Multiplexed 7-Segment Display"
+description: "Welcome to my Quarto portfolio"
+author: "Ket Hollingsworth"
+date: "8/23/24"
+categories:
+  - reflection
+  - labreport
+draft: false
+---
