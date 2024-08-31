@@ -1,0 +1,30 @@
+[
+  {
+    "objectID": "labs.html",
+    "href": "labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "Lab 1: FPGA and MCU Setup and Testing\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 2: Multiplexed 7-Segment Display\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 3: Keypad Scanner\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Digital Audio\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Interrupts\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 6: The Internet of Things and Serial Peripheral Interface\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 7: The Advanced Encryption Standard\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ket’s E155 Portfolio",
+    "section": "",
+    "text": "Ket Hollingsworth is a current Senior at Harvey Mudd College studying under a Joint Computer Science and Mathematics Major. His interests lie mainly in the intersection of Hardware and Software, an interest he began nuturing his sophomore year after joining the MuddSub underwater robotics club. Since then he went on to perform research at the intersection of Systems and Machine Learning, studying the variety of methods to move Machine Learning from the cloud to the edge while taking into account the energy constraints of the system. Besides academics Ket enjoys time with his family, playing volleyball with friends, and playing music."
+  },
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "myblog",
+    "section": "",
+    "text": "Initial Learning Goals\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nThis contains my set of learning goals!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/first-post.html",
+    "href": "posts/first-post.html",
+    "title": "Initial Learning Goals",
+    "section": "",
+    "text": "In this course I hope to get better at reading through intense documentation. I want to be confident with debugging with an oscilloscope along with other tools that allow me to debug hardware at a very low level. I believe this will give me the fundamentals I need to work in the field of embedded engineering!"
+  }
+]
