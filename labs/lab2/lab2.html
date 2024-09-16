@@ -118,8 +118,18 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#notes" id="toc-notes" class="nav-link active" data-scroll-target="#notes">Notes:</a>
+  <ul class="collapse">
+  <li><a href="#how-to-multiplex" id="toc-how-to-multiplex" class="nav-link" data-scroll-target="#how-to-multiplex">How to multiplex:</a></li>
+  <li><a href="#hints" id="toc-hints" class="nav-link" data-scroll-target="#hints">Hints:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -128,7 +138,6 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title">
 <h1 class="title">Lab 2: Multiplexed 7-Segment Display</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">reflection</div>
     <div class="quarto-category">labreport</div>
   </div>
   </div>
@@ -164,8 +173,26 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="notes" class="level2">
+<h2 class="anchored" data-anchor-id="notes">Notes:</h2>
+<p>We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.</p>
+<p>Using a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.</p>
+<section id="how-to-multiplex" class="level3">
+<h3 class="anchored" data-anchor-id="how-to-multiplex">How to multiplex:</h3>
+<ul>
+<li>A convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.
+<ul>
+<li>lab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.</li>
+</ul></li>
+</ul>
+</section>
+<section id="hints" class="level3">
+<h3 class="anchored" data-anchor-id="hints">Hints:</h3>
+<p>Look at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

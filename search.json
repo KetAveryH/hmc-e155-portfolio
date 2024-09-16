@@ -4,7 +4,21 @@
     "href": "labs.html",
     "title": "Labs",
     "section": "",
-    "text": "Lab 1: FPGA and MCU Setup and Testing\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 2: Multiplexed 7-Segment Display\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 3: Keypad Scanner\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Digital Audio\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Interrupts\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 6: The Internet of Things and Serial Peripheral Interface\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 7: The Advanced Encryption Standard\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+    "text": "Lab 1: FPGA and MCU Setup and Testing\n\n\n\n\n\n\nlabreport\n\n\n\n7-Segment Display Interfacing and Verilog!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 2: Multiplexed 7-Segment Display\n\n\n\n\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 3: Keypad Scanner\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Digital Audio\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Interrupts\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 6: The Internet of Things and Serial Peripheral Interface\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 7: The Advanced Encryption Standard\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "labs/lab2/lab2.html",
+    "href": "labs/lab2/lab2.html",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "",
+    "text": "We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.\nUsing a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.\n\n\n\nA convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.\n\nlab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.\n\n\n\n\n\nLook at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#notes",
+    "href": "labs/lab2/lab2.html#notes",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "",
+    "text": "We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.\nUsing a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.\n\n\n\nA convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.\n\nlab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.\n\n\n\n\n\nLook at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems."
   },
   {
     "objectID": "index.html",
@@ -19,6 +33,41 @@
     "title": "myblog",
     "section": "",
     "text": "Initial Learning Goals\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nThis contains my set of learning goals!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html",
+    "href": "labs/lab1/lab1.html",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "",
+    "text": "In this lab, a verilog module was implemented on the FPGA to control LEDs and interface with a 7-segment display. This lab demonstrates the ability to write modular verilog that interfaces with hardware, along with the ability to build, assemble, test, and debug circuits."
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#introduction",
+    "href": "labs/lab1/lab1.html#introduction",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "",
+    "text": "In this lab, a verilog module was implemented on the FPGA to control LEDs and interface with a 7-segment display. This lab demonstrates the ability to write modular verilog that interfaces with hardware, along with the ability to build, assemble, test, and debug circuits."
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#design-and-testing-methodology",
+    "href": "labs/lab1/lab1.html#design-and-testing-methodology",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "Design and Testing Methodology",
+    "text": "Design and Testing Methodology\nThe on-board high-speed oscillator (HSOSC) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24MHz. Then, a counter was used to divide the high frequency clock signal down to a frequency of 2.4Hz which was then easily visualized using one of the on-board LEDs. We used the FPGA’s Programmable Logic Blocks (PLB) in order to drive two LEDs and our 7 segment display. LED0 followed the logic of a xor operation and LED1 followed the logic of an AND operation. The inputs of LED0 and LED1 were driven with 4 individual switches each assigned their own GPIO input pin and either outputted 3.3V logic. We then tested the logic of the 4 switches and ensured that our inputs aligned with the expected outputs.\nThe next step was to integrate the 7 segment display logic. Using the same 4 individual switches, they would encode a binary value from 0-15 which would be represented on our 7 segment display using Hexadecimal values 0-F. Upon reviewing the 7 Segment Display it was found that the model number was KYX-5101AS with a shared cathode. This meant there a shared 3.3v rail between all diodes, and each individual diode pin would have to be pulled to ground for current to form. Each diode was rated for 20 mA of current and it was calculated that a 150 ohm resistor between each diode and ground would be sufficient. After this all GPIO pins were set to high (the default state of our combinational block) and each individual diode was prodded with a grounding wire to ensure each LED lit up appropriately without any unusual behavior. From this point on the Combinational Logic was programmed, GPIO pins were assigned, and the sequence of binary values from 0-15 were tested to see if the appropriate hexadecimal values 0-F were displayed."
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#technical-documentation",
+    "href": "labs/lab1/lab1.html#technical-documentation",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "Technical Documentation:",
+    "text": "Technical Documentation:\nThe source code for the project can be found in the associated Github Repository.\n\nBlock Diagram\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top-level module lab_1 includes 3 submodules: - HZ_blink which drives an LED2 at 2.4Hz. - led_blink which drives LED0 and LED1 using combinational logic and our 4 switches as inputs. - seven_seg_display which drives our seven segment display using combinational logic and our 4 switches as inputs.\n\n\nSchematic"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#results-and-discussion",
+    "href": "labs/lab1/lab1.html#results-and-discussion",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "Results and Discussion",
+    "text": "Results and Discussion"
   },
   {
     "objectID": "posts/first-post.html",
