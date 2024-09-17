@@ -1,0 +1,12 @@
+---
+title: "Week 1 Reflection"
+description: "This is a reflection over Lab 1 and the first week in Micro P's"
+author: "Ket Hollingsworth"
+date: "9/5/2024"
+categories:
+  - reflection
+draft: false
+---
+
+## Reflection on Lab 1
+To start off, I had a lot of fun on this lab! Though a lot of time was spent soldering annoyingly small SMTs, by the end of it I not only felt comfortable with soldering tiny parts, but I felt quite efficient at it! Besides that this firt lab acted as a great refresher for a lot of basic Verilog concepts such as when to us the get operater <= vs assign =, when to use alwayscomb vs always_ff, along with what the word volatile even means! I also feel like I was able to gain familiarity with lattice radiant as a software, and though I was able to incorporate modelsim to simulate expected values, I still had to comb through the results by hand. Ideally I hope that by the next lab I will be able to construct a test bench to make those simulated outputs easier to check off. I am looking forward to the next few set of labs, and am happy I got this done!
