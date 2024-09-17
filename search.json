@@ -53,14 +53,14 @@
     "href": "labs/lab1/lab1.html#design-and-testing-methodology",
     "title": "Lab 1: FPGA and MCU Setup and Testing",
     "section": "Design and Testing Methodology",
-    "text": "Design and Testing Methodology\nThe on-board high-speed oscillator (HSOSC) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24MHz. Then, a counter was used to divide the high frequency clock signal down to a frequency of 2.4Hz which was then easily visualized using one of the on-board LEDs. We used the FPGA’s Programmable Logic Blocks (PLB) in order to drive two LEDs and our 7 segment display. LED0 followed the logic of a xor operation and LED1 followed the logic of an AND operation. The inputs of LED0 and LED1 were driven with 4 individual switches each assigned their own GPIO input pin and either outputted 3.3V logic. We then tested the logic of the 4 switches and ensured that our inputs aligned with the expected outputs.\nThe next step was to integrate the 7 segment display logic. Using the same 4 individual switches, they would encode a binary value from 0-15 which would be represented on our 7 segment display using Hexadecimal values 0-F. Upon reviewing the 7 Segment Display it was found that the model number was KYX-5101AS with a shared cathode. This meant there a shared 3.3v rail between all diodes, and each individual diode pin would have to be pulled to ground for current to form. Each diode was rated for 20 mA of current and it was calculated that a 150 ohm resistor between each diode and ground would be sufficient. After this all GPIO pins were set to high (the default state of our combinational block) and each individual diode was prodded with a grounding wire to ensure each LED lit up appropriately without any unusual behavior. From this point on the Combinational Logic was programmed, GPIO pins were assigned, and the sequence of binary values from 0-15 were tested to see if the appropriate hexadecimal values 0-F were displayed."
+    "text": "Design and Testing Methodology\nThe on-board high-speed oscillator (HSOSC) from the iCE40 UltraPlus primitive library was used to generate a clock signal at 24MHz. Then, a counter was used to divide the high frequency clock signal down to a frequency of 2.4Hz which was then easily visualized using one of the on-board LEDs. We used the FPGA’s Programmable Logic Blocks (PLB) in order to drive two LEDs and our 7 segment display. LED0 followed the logic of a xor operation and LED1 followed the logic of an AND operation. The inputs of LED0 and LED1 were driven with 4 individual switches each assigned their own GPIO input pin and either outputted 3.3V logic. We then tested the logic of the 4 switches and ensured that our inputs aligned with the expected outputs.\nThe next step was to integrate the 7 segment display logic. Using the same 4 individual switches, they would encode a binary value from 0-15 which would be represented on our 7 segment display using Hexadecimal values 0-F. Upon reviewing the 7 Segment Display it was found that the model number was KYX-5101AS with a shared cathode. This meant there a shared 3.3v rail between all diodes, and each individual diode pin would have to be pulled to ground for current to form. Each diode was rated for 20 mA, so consequently 10mA was chosen as the target current. It was calculated that a 150 ohm resistor between each diode and ground would be sufficient. After this all GPIO pins were set to high (the default state of our combinational block) and each individual diode was prodded with a grounding wire to ensure each LED lit up appropriately without any unusual behavior. From this point on the Combinational Logic was programmed, GPIO pins were assigned, and the sequence of binary values from 0-15 were tested to see if the appropriate hexadecimal values 0-F were displayed."
   },
   {
     "objectID": "labs/lab1/lab1.html#technical-documentation",
     "href": "labs/lab1/lab1.html#technical-documentation",
     "title": "Lab 1: FPGA and MCU Setup and Testing",
     "section": "Technical Documentation:",
-    "text": "Technical Documentation:\nThe source code for the project can be found in the associated Github Repository.\n\nBlock Diagram\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top-level module lab_1 includes 3 submodules: - HZ_blink which drives an LED2 at 2.4Hz. - led_blink which drives LED0 and LED1 using combinational logic and our 4 switches as inputs. - seven_seg_display which drives our seven segment display using combinational logic and our 4 switches as inputs.\n\n\nSchematic"
+    "text": "Technical Documentation:\nThe source code for the project can be found in the associated Github Repository.\n\nBlock Diagram\n\n\n\nFigure 1: Block Diagram\n\n\nThe block diagram in Figure 1 demonstrates the overall architecture of the design. The top-level module lab_1 includes 3 submodules: - HZ_blink which drives an LED2 at 2.4Hz. - led_blink which drives LED0 and LED1 using combinational logic and our 4 switches as inputs. - seven_seg_display which drives our seven segment display using combinational logic and our 4 switches as inputs.\n\n\nSchematic\n\n\n\nFigure 2: Schematic\n\n\nFigure 2 shows the physical layout of the design. Internal 100 \\(k\\ohm\\) pullup resistors were use to ensure that the diodes defaulted to 3.3v as to not power on any diodes. In order to ensure that each LED on the 7 segment display maintained a 10mA of current again we used 150 \\(\\ohm\\) resistored between the diode and our GPIO pins."
   },
   {
     "objectID": "labs/lab1/lab1.html#results-and-discussion",
@@ -68,6 +68,13 @@
     "title": "Lab 1: FPGA and MCU Setup and Testing",
     "section": "Results and Discussion",
     "text": "Results and Discussion"
+  },
+  {
+    "objectID": "labs/lab1/lab1.html#testbench-simulation",
+    "href": "labs/lab1/lab1.html#testbench-simulation",
+    "title": "Lab 1: FPGA and MCU Setup and Testing",
+    "section": "Testbench Simulation",
+    "text": "Testbench Simulation"
   },
   {
     "objectID": "posts/first-post.html",
