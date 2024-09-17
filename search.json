@@ -1,38 +1,10 @@
 [
   {
-    "objectID": "labs.html",
-    "href": "labs.html",
-    "title": "Labs",
+    "objectID": "posts/first-post.html",
+    "href": "posts/first-post.html",
+    "title": "Initial Learning Goals",
     "section": "",
-    "text": "Lab 1: FPGA and MCU Setup and Testing\n\n\n\n\n\n\nlabreport\n\n\n\n7-Segment Display Interfacing and Verilog!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 2: Multiplexed 7-Segment Display\n\n\n\n\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 3: Keypad Scanner\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Digital Audio\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Interrupts\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 6: The Internet of Things and Serial Peripheral Interface\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 7: The Advanced Encryption Standard\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "labs/lab2/lab2.html",
-    "href": "labs/lab2/lab2.html",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
-    "section": "",
-    "text": "We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.\nUsing a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.\n\n\n\nA convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.\n\nlab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.\n\n\n\n\n\nLook at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems."
-  },
-  {
-    "objectID": "labs/lab2/lab2.html#notes",
-    "href": "labs/lab2/lab2.html#notes",
-    "title": "Lab 2: Multiplexed 7-Segment Display",
-    "section": "",
-    "text": "We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.\nUsing a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.\n\n\n\nA convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.\n\nlab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.\n\n\n\n\n\nLook at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems."
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ket’s E155 Portfolio",
-    "section": "",
-    "text": "Ket Hollingsworth is a senior at Harvey Mudd College, majoring in Computer Science and Mathematics. His passion for the intersection of hardware and software took root during his sophomore year when he joined the MuddSub underwater robotics club. Since then, Ket has delved into research at the nexus of systems and machine learning, investigating methods to transition machine learning from the cloud to the edge while considering energy constraints. He is also the founder and software lead of ExploraVist.net, a startup developing an AI-powered wearable device to enhance perception for the visually impaired, utilizing machine learning and sensory substitution. Under his leadership, the team secured $60,000 in investments and enrolled in the 2024-2025 Clinic program at HMC. Outside of academics, Ket enjoys spending time with his family, playing volleyball with friends, and making music."
-  },
-  {
-    "objectID": "blog.html",
-    "href": "blog.html",
-    "title": "myblog",
-    "section": "",
-    "text": "Initial Learning Goals\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nThis contains my set of learning goals!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+    "text": "In this course I hope to get better at reading through intense documentation. I want to be confident with debugging with an oscilloscope along with other tools that allow me to debug hardware at a very low level. I believe this will give me the fundamentals I need to work in the field of embedded engineering!"
   },
   {
     "objectID": "labs/lab1/lab1.html",
@@ -77,10 +49,52 @@
     "text": "Testbench Simulation\n To verify the 7-Segment Display logic I forced our 4 bit s input to take on every value from 0-F in Hexadecimal. Upon reviewing the outputs of the seg variable I was able to verify that each output was as expected in our set of cases that I outlined. This was then further verified upon deployment of the verilog code to the FPGA. In future labs I plan on setting up a test bench environment for a more streamlined simulated verification process."
   },
   {
-    "objectID": "posts/first-post.html",
-    "href": "posts/first-post.html",
-    "title": "Initial Learning Goals",
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "myblog",
     "section": "",
-    "text": "In this course I hope to get better at reading through intense documentation. I want to be confident with debugging with an oscilloscope along with other tools that allow me to debug hardware at a very low level. I believe this will give me the fundamentals I need to work in the field of embedded engineering!"
+    "text": "Week 1 Reflection\n\n\n\n\n\n\nreflection\n\n\n\nThis is a reflection over Lab 1 and the first week in Micro P’s\n\n\n\n\n\nSep 5, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nInitial Learning Goals\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nThis contains my set of learning goals!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ket’s E155 Portfolio",
+    "section": "",
+    "text": "Ket Hollingsworth is a senior at Harvey Mudd College, majoring in Computer Science and Mathematics. His passion for the intersection of hardware and software took root during his sophomore year when he joined the MuddSub underwater robotics club. Since then, Ket has delved into research at the nexus of systems and machine learning, investigating methods to transition machine learning from the cloud to the edge while considering energy constraints. He is also the founder and software lead of ExploraVist.net, a startup developing an AI-powered wearable device to enhance perception for the visually impaired, utilizing machine learning and sensory substitution. Under his leadership, the team secured $60,000 in investments and enrolled in the 2024-2025 Clinic program at HMC. Outside of academics, Ket enjoys spending time with his family, playing volleyball with friends, and making music."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html",
+    "href": "labs/lab2/lab2.html",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "",
+    "text": "We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.\nUsing a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.\n\n\n\nA convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.\n\nlab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.\n\n\n\n\n\nLook at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems."
+  },
+  {
+    "objectID": "labs/lab2/lab2.html#notes",
+    "href": "labs/lab2/lab2.html#notes",
+    "title": "Lab 2: Multiplexed 7-Segment Display",
+    "section": "",
+    "text": "We are implementing a time-multiplexing scheme to drive two seven-segment dispalys with a single set of FPGA I/O pins.\nUsing a DIP switch and four other input pins (possibly connected to a DIP switch on a breadboard) to provide the data for two hexadecimal numbers. You must use a single sevent-segment decoder HDL module to drive the cathodes for both digits on the display, which therefore must be wired for multiplexed operation. Also, display the sum of the numbers on five LEDs. The seven segment display should be oriented to display the numbers upright to the viewer.\n\n\n\nA convenient way to control which half is active is to turn ON the common anode of only one display at a time. The anode required substantial current, more than an FPGA output pin can drive. You can use a transistor to drive the large current.\n\nlab has stock of 2N3906 PNP transistors suitable for this purpose. Be sure to limit the base current so that you don’t draw too much current from the FPGA pin and choose a suitable switching speed. If you switch too slowly, your eye will notice the flicker. If you switch too fast for the electronics, the two digits will bleed together.\n\n\n\n\n\nLook at your RTL schematic in your synthesis tool (Tools -&gt; Netlist Analyzer). Understand why your code produces the hardware you see. Be sure your combinational logic doesn’t have any registers. Be sure your logic has no latches or tristate buffers. The oscilloscope is handy for tracking down timing problems."
+  },
+  {
+    "objectID": "labs.html",
+    "href": "labs.html",
+    "title": "Labs",
+    "section": "",
+    "text": "Lab 1: FPGA and MCU Setup and Testing\n\n\n\n\n\n\nlabreport\n\n\n\n7-Segment Display Interfacing and Verilog!\n\n\n\n\n\nAug 30, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 2: Multiplexed 7-Segment Display\n\n\n\n\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 3: Keypad Scanner\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Digital Audio\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 4: Interrupts\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 6: The Internet of Things and Serial Peripheral Interface\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\n\n\n\n\n\n\nLab 7: The Advanced Encryption Standard\n\n\n\n\n\n\nreflection\n\n\nlabreport\n\n\n\nWelcome to my Quarto portfolio\n\n\n\n\n\nAug 23, 2024\n\n\nKet Hollingsworth\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/reflection-week1.html",
+    "href": "posts/reflection-week1.html",
+    "title": "Week 1 Reflection",
+    "section": "",
+    "text": "To start off, I had a lot of fun on this lab! Though a lot of time was spent soldering annoyingly small SMTs, by the end of it I not only felt comfortable with soldering tiny parts, but I felt quite efficient at it! Besides that this firt lab acted as a great refresher for a lot of basic Verilog concepts such as when to us the get operater &lt;= vs assign =, when to use alwayscomb vs always_ff, along with what the word volatile even means! I also feel like I was able to gain familiarity with lattice radiant as a software, and though I was able to incorporate modelsim to simulate expected values, I still had to comb through the results by hand. Ideally I hope that by the next lab I will be able to construct a test bench to make those simulated outputs easier to check off. I am looking forward to the next few set of labs, and am happy I got this done!"
+  },
+  {
+    "objectID": "posts/reflection-week1.html#reflection-on-lab-1",
+    "href": "posts/reflection-week1.html#reflection-on-lab-1",
+    "title": "Week 1 Reflection",
+    "section": "",
+    "text": "To start off, I had a lot of fun on this lab! Though a lot of time was spent soldering annoyingly small SMTs, by the end of it I not only felt comfortable with soldering tiny parts, but I felt quite efficient at it! Besides that this firt lab acted as a great refresher for a lot of basic Verilog concepts such as when to us the get operater &lt;= vs assign =, when to use alwayscomb vs always_ff, along with what the word volatile even means! I also feel like I was able to gain familiarity with lattice radiant as a software, and though I was able to incorporate modelsim to simulate expected values, I still had to comb through the results by hand. Ideally I hope that by the next lab I will be able to construct a test bench to make those simulated outputs easier to check off. I am looking forward to the next few set of labs, and am happy I got this done!"
   }
 ]
