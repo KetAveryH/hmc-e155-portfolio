@@ -67,14 +67,14 @@
     "href": "labs/lab1/lab1.html#results-and-discussion",
     "title": "Lab 1: FPGA and MCU Setup and Testing",
     "section": "Results and Discussion",
-    "text": "Results and Discussion"
+    "text": "Results and Discussion\nAt the conclusion of this lab I was able to display a set of hexadecimal numbers on a 7-Segment Display that was being driven by a 4 DIP switch module. In order to do this I learned how to incorporate combinational logic blocks in my verilog code, and also drove a set of LED’s with simple AND/OR logic depending on DIP switch positioning. I was also able to successfully make use of the onboard High Speed Oscillator (HSOC) in conjunction with a counter module to blink an on board LED at 2.4 Hz. Overly the completion of this lab demonstrates the ability to write modular verilog, along with the ability to build, assemble, test, and debug circuits."
   },
   {
     "objectID": "labs/lab1/lab1.html#testbench-simulation",
     "href": "labs/lab1/lab1.html#testbench-simulation",
     "title": "Lab 1: FPGA and MCU Setup and Testing",
     "section": "Testbench Simulation",
-    "text": "Testbench Simulation"
+    "text": "Testbench Simulation\n To verify the 7-Segment Display logic I forced our 4 bit s input to take on every value from 0-F in Hexadecimal. Upon reviewing the outputs of the seg variable I was able to verify that each output was as expected in our set of cases that I outlined. This was then further verified upon deployment of the verilog code to the FPGA. In future labs I plan on setting up a test bench environment for a more streamlined simulated verification process."
   },
   {
     "objectID": "posts/first-post.html",
