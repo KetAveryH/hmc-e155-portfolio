@@ -116,8 +116,22 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lab-4-digital-audio" id="toc-lab-4-digital-audio" class="nav-link active" data-scroll-target="#lab-4-digital-audio">Lab 4: Digital Audio</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary</a></li>
+  <li><a href="#design-approach" id="toc-design-approach" class="nav-link" data-scroll-target="#design-approach">Design Approach</a></li>
+  <li><a href="#testing-approach" id="toc-testing-approach" class="nav-link" data-scroll-target="#testing-approach">Testing Approach</a></li>
+  <li><a href="#results" id="toc-results" class="nav-link" data-scroll-target="#results">Results</a></li>
+  <li><a href="#time-spent" id="toc-time-spent" class="nav-link" data-scroll-target="#time-spent">Time Spent</a></li>
+  <li><a href="#suggestions" id="toc-suggestions" class="nav-link" data-scroll-target="#suggestions">Suggestions</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -151,8 +165,80 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="lab-4-digital-audio" class="level1">
+<h1>Lab 4: Digital Audio</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary</h2>
+<p>For this assignment, we were tasked with playing “Für Elise” over a speaker using an MCU. The main goals were to ensure the song played at the proper frequency and tempo while implementing timer functionality and audio amplification. My approach involved enabling the correct clock frequency, configuring timers, and generating PWM signals to drive a speaker through an LM386 amplifier. I spent approximately 10 hours completing this lab.</p>
+</section>
+<section id="design-approach" class="level2">
+<h2 class="anchored" data-anchor-id="design-approach">Design Approach</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/schematic.png" class="img-fluid figure-img"></p>
+<figcaption>Schematic</figcaption>
+</figure>
+</div>
+<p>My design approach was modular, starting with clock configuration and progressing to timer implementation:</p>
+<ol type="1">
+<li><strong>Clock Configuration</strong>:
+<ul>
+<li>I enabled the PLL to achieve the desired system clock frequency.</li>
+<li>The system clock was set to the default 4 MHz of the STM32 MCU, which I used as a basis for timer calculations.</li>
+</ul></li>
+<li><strong>Timer Configuration</strong>:
+<ul>
+<li>Configured <strong>Timer 2</strong> to generate a PWM output.<br>
+</li>
+<li>Configured <strong>Timer 6</strong> as a counter for timing durations.</li>
+</ul></li>
+<li><strong>PWM Signal Generation</strong>:
+<ul>
+<li>Timer 2’s PWM output was connected to a GPIO pin driving the speaker.<br>
+</li>
+<li>I implemented a function to adjust Timer 2’s registers to set the PWM frequency dynamically based on the note’s pitch.</li>
+</ul></li>
+<li><strong>Duration Control</strong>:
+<ul>
+<li>Timer 6 was configured to count clock cycles corresponding to the note’s duration.<br>
+</li>
+<li>I calculated the necessary delay by converting the duration (in milliseconds) into clock cycles using the formula:<br>
+<code>delay = system_clock_frequency × duration_in_seconds</code>.</li>
+</ul></li>
+<li><strong>Audio Amplification</strong>:
+<ul>
+<li>I used an LM386 amplifier between the GPIO pin and the speaker to ensure adequate current for sound output.</li>
+</ul></li>
+</ol>
+</section>
+<section id="testing-approach" class="level2">
+<h2 class="anchored" data-anchor-id="testing-approach">Testing Approach</h2>
+<p>To verify the system’s performance:</p>
+<ul>
+<li><strong>PWM Output</strong>: Measured the GPIO pin output using an oscilloscope to confirm that the square wave matched the expected frequency for each note.<br>
+</li>
+<li><strong>Full Playback Test</strong>: Played the entire song to verify that the pitch and tempo matched expectations.</li>
+</ul>
+</section>
+<section id="results" class="level2">
+<h2 class="anchored" data-anchor-id="results">Results</h2>
+<ul>
+<li>The system successfully met the requirements by playing “Für Elise” with accurate pitches and timing.<br>
+</li>
+<li>Challenges included ensuring consistent timing and debugging timer register configurations, which were resolved through incremental testing and review of the MCU datasheet.</li>
+</ul>
+</section>
+<section id="time-spent" class="level2">
+<h2 class="anchored" data-anchor-id="time-spent">Time Spent</h2>
+<p>I spent approximately <strong>10 hours</strong> on this lab, including time for debugging and testing.</p>
+</section>
+<section id="suggestions" class="level2">
+<h2 class="anchored" data-anchor-id="suggestions">Suggestions</h2>
+<p>This assignment was particularly enjoyable due to its combination of hardware and software challenges. For future iterations, I recommend providing more detailed starter documentation on timer register configurations to help students unfamiliar with the datasheet navigate it more efficiently.</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

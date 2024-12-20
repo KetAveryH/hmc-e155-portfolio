@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2024-08-23">
 <meta name="description" content="Welcome to my Quarto portfolio">
 
-<title>Lab 4: Interrupts – E155 Portfolio</title>
+<title>Lab 5: Interrupts – E155 Portfolio</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -118,15 +118,28 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#lab-5-interrupts" id="toc-lab-5-interrupts" class="nav-link active" data-scroll-target="#lab-5-interrupts">Lab 5: Interrupts</a>
+  <ul class="collapse">
+  <li><a href="#summary" id="toc-summary" class="nav-link" data-scroll-target="#summary">Summary:</a></li>
+  <li><a href="#design-approach" id="toc-design-approach" class="nav-link" data-scroll-target="#design-approach">Design Approach:</a></li>
+  <li><a href="#testing-approach" id="toc-testing-approach" class="nav-link" data-scroll-target="#testing-approach">Testing Approach:</a></li>
+  <li><a href="#design-assessment" id="toc-design-assessment" class="nav-link" data-scroll-target="#design-assessment">Design Assessment:</a></li>
+  <li><a href="#time-spent" id="toc-time-spent" class="nav-link" data-scroll-target="#time-spent">Time Spent:</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Lab 4: Interrupts</h1>
+<h1 class="title">Lab 5: Interrupts</h1>
   <div class="quarto-categories">
     <div class="quarto-category">reflection</div>
     <div class="quarto-category">labreport</div>
@@ -164,8 +177,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="lab-5-interrupts" class="level1">
+<h1>Lab 5: Interrupts</h1>
+<section id="summary" class="level2">
+<h2 class="anchored" data-anchor-id="summary">Summary:</h2>
+<p>The main goal of this lab was to measure the angular velocity and direction of a brushed DC motor using a quadrature encoder and interrupts on an STM32 microcontroller. We implemented an algorithm to count encoder pulses, calculated velocity and direction, and displayed the results to the user at an update rate of at least 1 Hz.</p>
+</section>
+<section id="design-approach" class="level2">
+<h2 class="anchored" data-anchor-id="design-approach">Design Approach:</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/schematic.png" class="img-fluid figure-img"></p>
+<figcaption>Schematic</figcaption>
+</figure>
+</div>
+<ol type="1">
+<li>Researched how to enable interrupts on the STM32 microcontroller, focusing on GPIO pin configuration and CMSIS library functions.</li>
+<li>Configured an interrupt on a GPIO pin to detect pulses from the quadrature encoder.</li>
+<li>Used a counter to count the number of interrupts and a timer to measure the time between pulses.</li>
+<li>Calculated angular velocity based on the number of pulses per revolution and the time taken for each pulse.</li>
+<li>Displayed the calculated velocity and direction to the screen using the <code>printf</code> function.</li>
+</ol>
+</section>
+<section id="testing-approach" class="level2">
+<h2 class="anchored" data-anchor-id="testing-approach">Testing Approach:</h2>
+<ul>
+<li>Verified interrupt functionality by printing a message to the screen when the interrupt was triggered.</li>
+<li>Ensured accurate speed calculation by comparing results to the motor’s known speed of approximately 10 rev/s.</li>
+<li>Tested the system at both high and low motor speeds to confirm consistent performance.</li>
+</ul>
+</section>
+<section id="design-assessment" class="level2">
+<h2 class="anchored" data-anchor-id="design-assessment">Design Assessment:</h2>
+<ul>
+<li>The design met all requirements. The system successfully calculated and displayed motor velocity and direction at a 1 Hz update rate.</li>
+<li>No significant shortcomings were identified in the design, though time spent understanding documentation and interrupt setup delayed progress.</li>
+</ul>
+</section>
+<section id="time-spent" class="level2">
+<h2 class="anchored" data-anchor-id="time-spent">Time Spent:</h2>
+<p>Approximately 12 hours were spent on this lab, including debugging and testing (replace X with your actual hours).</p>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
