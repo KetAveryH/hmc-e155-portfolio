@@ -192,17 +192,12 @@ ul.task-list li input[type="checkbox"] {
 <figcaption>Netlist Analyzer</figcaption>
 </figure>
 </div>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure">
-<p><img src="images/schematic.jpg" class="img-fluid figure-img"></p>
-<figcaption>Schematic</figcaption>
-</figure>
-</div>
 <ul>
-<li><strong>Seven-Segment Decoder</strong>: Reused the seven-segment decoder module from the previous lab to drive the cathodes for hexadecimal digits.</li>
-<li><strong>Time-Multiplexing</strong>: A counter-based time-multiplexing scheme was used to switch between two input sources. The counter toggled between activating the left and right seven-segment displays by enabling their common anodes alternately.</li>
-<li><strong>Binary Addition</strong>: Combinational logic was employed to calculate the sum of the two 4-bit inputs. The result was output to the 5-bit LED array.</li>
-<li><strong>Transistor Circuit</strong>: A 2N3906 PNP transistor circuit was used to drive the common anodes of the seven-segment display to handle the higher current demands. Proper base current limiting resistors ensured no excessive current draw from the FPGA.</li>
+<li><p><a href="https://github.com/KetAveryH/lab-2-hmc-e155.git">GitHub Repository</a> <img src="images/schematic.jpg" class="img-fluid quarto-figure quarto-figure-center" alt="Schematic"></p></li>
+<li><p><strong>Seven-Segment Decoder</strong>: Reused the seven-segment decoder module from the previous lab to drive the cathodes for hexadecimal digits.</p></li>
+<li><p><strong>Time-Multiplexing</strong>: A counter-based time-multiplexing scheme was used to switch between two input sources. The counter toggled between activating the left and right seven-segment displays by enabling their common anodes alternately.</p></li>
+<li><p><strong>Binary Addition</strong>: Combinational logic was employed to calculate the sum of the two 4-bit inputs. The result was output to the 5-bit LED array.</p></li>
+<li><p><strong>Transistor Circuit</strong>: A 2N3906 PNP transistor circuit was used to drive the common anodes of the seven-segment display to handle the higher current demands. Proper base current limiting resistors ensured no excessive current draw from the FPGA.</p></li>
 </ul>
 </section>
 <section id="testing-approach" class="level2">
